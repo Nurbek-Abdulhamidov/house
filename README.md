@@ -1,6 +1,8 @@
 # Getting Started with Nurbek Abdulkhamid
 
-This project was available in GitHub [Create React App](https://github.com/).
+This project is available on GitHub [Houzing](https://github.com/Nurbek-Abdulhamidov/house).
+
+# can see the demo [Houzing](https://netlify.com/house).
 
 ## Available Scripts
 
