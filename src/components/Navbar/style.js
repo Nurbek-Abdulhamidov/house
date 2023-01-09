@@ -8,7 +8,6 @@ export const Container = styled.div`
 `;
 export const Main = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   background-color: var(--colorPrimary);
 `;
@@ -21,6 +20,7 @@ export const Wrapper = styled.div`
   padding: var(--padding);
   height: 64px;
   font-size: 16px;
+  width: 100%;
   max-width: 1440px;
 `;
 
