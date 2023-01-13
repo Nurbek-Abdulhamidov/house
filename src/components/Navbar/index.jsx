@@ -3,6 +3,7 @@ import logoImg from "../../assets/icons/logo.svg";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Container, Link, Logo, Section, Wrapper ,Main} from "./style";
 import { navbar } from "../../utils/navbar";
+import Button from "../Generic/Button";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Home = () => {
           })}
         </Section>
         <Section>
-          <button>Sign in</button>
+          <Button>Sign in</Button>
         </Section>
       </Wrapper>
       </Main>
