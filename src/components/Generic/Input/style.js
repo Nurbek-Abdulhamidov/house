@@ -1,6 +1,7 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 
-export const getType = ({ type }) => {
+export const getType = ({ type,ref }) => {
   switch (type) {
     case "dark":
       return {
@@ -29,18 +30,34 @@ export const getType = ({ type }) => {
   }
 };
 
-export const Container = styled.button`
+export const Container = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
   min-width: 120px;
-  cursor: pointer;
+
+  outline: none;
+  border: 1px solid #e6e9ec;
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
-  width: ${({ width }) => (width ? `${width}px` : "130px")};
+  width: ${({ width }) => (width ? `${width}px` : "100%")};
   height: ${({ height }) => (height ? `${height}px` : "44px")};
-  ${getType};
-  :active {
-    opacity: 0.7;
+  padding-left: ${({ icon }) => (icon ? "40px" : "20px")};
+  /* ${getType}; */
+  :focus {
+    border: 1px solid #0061df;
   }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: ${({ width }) => (width ? `${width}px` : "100%")};
+  position: relative;
+`;
+
+export const Icon = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 10px;
 `;
