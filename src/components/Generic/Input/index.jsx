@@ -1,18 +1,19 @@
+// eslint-disable-next-line
 import React, { forwardRef } from "react";
 import { Container, Icon, Wrapper } from "./style";
 
 export const Input = forwardRef(
   (
     {
+      icon,
       type,
       onChange,
-      value,
-      defaultValue,
-      placeholder,
-      name,
       width,
       height,
-      icon,
+      placeholder,
+      name,
+      value,
+      defaultValue,
     },
     ref
   ) => {
@@ -21,18 +22,19 @@ export const Input = forwardRef(
         <Icon>{icon}</Icon>
         <Container
           ref={ref}
-          placeholder={placeholder}
+          icon={icon}
           name={name}
           value={value}
           defaultValue={defaultValue}
+          placeholder={placeholder}
           onChange={onChange}
           type={type}
           width={width}
           height={height}
-          icon={icon}
         />
       </Wrapper>
     );
   }
 );
+
 export default Input;
