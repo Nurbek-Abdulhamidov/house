@@ -1,18 +1,18 @@
+import React, { forwardRef } from "react";
 import { Container, Icon, Wrapper } from "./style";
 
-import { forwardRef } from "react";
 export const Input = forwardRef(
   (
     {
-      icon,
       type,
       onChange,
-      width,
-      height,
-      placeholder,
-      name,
       value,
       defaultValue,
+      placeholder,
+      name,
+      width,
+      height,
+      icon,
     },
     ref
   ) => {
@@ -21,19 +21,18 @@ export const Input = forwardRef(
         <Icon>{icon}</Icon>
         <Container
           ref={ref}
-          icon={icon}
+          placeholder={placeholder}
           name={name}
           value={value}
           defaultValue={defaultValue}
-          placeholder={placeholder}
           onChange={onChange}
           type={type}
           width={width}
           height={height}
+          icon={icon}
         />
       </Wrapper>
     );
   }
 );
-
 export default Input;
