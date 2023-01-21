@@ -1,5 +1,5 @@
-// eslint-disable-next-line
-import React, { forwardRef } from "react";
+/* eslint-disable */
+import { forwardRef } from "react";
 import { Container, Icon, Wrapper } from "./style";
 
 export const Input = forwardRef(
