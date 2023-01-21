@@ -37,11 +37,11 @@ const HouseCard = ({ data = {} }) => {
           </Details.Item>
           <Details.Item>
             <Icons.Garage />
-            <div className="info">Garage {houseDetails?.garage || 0}</div>
+            <div className="info">Garages {houseDetails?.garage || 0}</div>
           </Details.Item>
           <Details.Item>
             <Icons.Ruler />
-            <div className="info">Ruler {houseDetails?.area || 0} kv</div>
+            <div className="info">Area {houseDetails?.area || 0} kv</div>
           </Details.Item>
         </Details>
       </Content>
