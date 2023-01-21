@@ -7,13 +7,12 @@ import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 export const Container = styled.div`
   width: 380px;
+  max-height: 429px !important;
   height: 429px;
 
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px) rgba(0, 0, 0, 0.06)
     drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-
-  margin: 100px;
 `;
 
 export const Img = styled.img`

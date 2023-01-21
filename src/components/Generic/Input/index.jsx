@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { forwardRef } from "react";
 import { Container, Icon, Wrapper } from "./style";
 
