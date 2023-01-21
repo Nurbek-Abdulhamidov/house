@@ -37,7 +37,7 @@ const HouseCard = ({ data = {} }) => {
           </Details.Item>
           <Details.Item>
             <Icons.Garage />
-            <div className="info">Garages {houseDetails?.garage || 0}</div>
+            <div className="info">Garage {houseDetails?.garage || 0}</div>
           </Details.Item>
           <Details.Item>
             <Icons.Ruler />
