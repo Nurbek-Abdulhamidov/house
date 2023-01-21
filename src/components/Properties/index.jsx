@@ -13,6 +13,8 @@ const Properties = () => {
       .then((res) => res.json())
       .then((res) => setData(res?.data || []));
   }, [search]);
+
+  
   return (
     <Container>
       {data.map((value, index) => {

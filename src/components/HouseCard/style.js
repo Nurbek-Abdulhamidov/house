@@ -6,7 +6,9 @@ import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 export const Container = styled.div`
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
+  min-width: 343px;
   max-height: 429px !important;
   height: 429px;
 
@@ -17,6 +19,7 @@ export const Container = styled.div`
 
 export const Img = styled.img`
   width: 100%;
+  min-height: 200px;
   max-height: 220px;
 `;
 
