@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Container, Content } from "./style";
-import CategoryCard from "../CategoryCard";
+import HouseCard from "../HouseCard";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
-const GenCarousel = () => {
+const Recommended = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
@@ -16,14 +16,14 @@ const GenCarousel = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "0px",
-    slidesToShow: 4,
+    slidesToShow: 3,
     speed: 500,
     dots: true,
     appendDots: (dots) => <h1>{dots}</h1>,
   };
 
   useEffect(() => {
-    fetch(`${url}/categories/list`)
+    fetch(`${url}/houses/list`)
       .then((res) => res.json())
       .then((res) => setData(res?.data || []));
   }, []);
@@ -31,16 +31,15 @@ const GenCarousel = () => {
   return (
     <Container>
       <Content>
-        <Content.Title>Category</Content.Title>
-        <Content.Desc>
-          Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
-        </Content.Desc>
+        <Content.Title>Recommended</Content.Title>
+        <Content.Desc>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</Content.Desc>
       </Content>
       <Slider {...settings}>
         {data.map((value, index) => {
           return (
-            <CategoryCard
-              onClick={() => navigate(`/properties?category_id=${value?.id}`)}
+            <HouseCard
+              gap={10}
+              onClick={() => navigate(`/properties/${value?.id}`)}
               data={value}
               key={index}
             />
@@ -51,4 +50,4 @@ const GenCarousel = () => {
   );
 };
 
-export default GenCarousel;
+export default Recommended;

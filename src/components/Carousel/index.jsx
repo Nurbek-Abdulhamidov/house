@@ -8,9 +8,6 @@ import img2 from "../../assets/imgs/house2.png";
 
 const GenCarousel = () => {
   const slider = useRef();
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
 
   const OnMove = ({
     target: {
@@ -26,7 +23,7 @@ const GenCarousel = () => {
   };
   return (
     <Container>
-      <Carousel afterChange={onChange} ref={slider}>
+      <Carousel ref={slider}>
         <Img src={img1} />
         <Img src={img2} />
       </Carousel>
@@ -38,7 +35,7 @@ const GenCarousel = () => {
         </Content.Desc>
         <Content.Price>$5,250 / mo</Content.Price>
       </Content>
-      <Arrow data-name="left" onClick={OnMove} left />
+      <Arrow data-name="left" onClick={OnMove} left={"true "} />
       <Arrow data-name="right" onClick={OnMove} />
     </Container>
   );

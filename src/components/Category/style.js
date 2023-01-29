@@ -42,12 +42,6 @@ export const Blur = styled.div`
 `;
 
 export const Content = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +55,8 @@ Content.Title = styled.h1`
   font-size: 44px;
   line-height: 48px;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #0d263b;
+  margin-bottom: 32px;
 `;
 
 Content.Desc = styled.h1`
@@ -70,7 +65,7 @@ Content.Desc = styled.h1`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: #696969;
 `;
 Content.Price = styled.h1`
   font-family: "Montserrat";

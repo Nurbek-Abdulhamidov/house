@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Content, Details, Divider, Icons, Img } from "./style";
 import noImg from "../../assets/imgs/no-image.jpg";
 
-const HouseCard = ({ data = {} }) => {
+const HouseCard = ({ onClick, data = {}, gap }) => {
   const {
     price,
     salePrice,
@@ -14,9 +14,8 @@ const HouseCard = ({ data = {} }) => {
     attachments,
     category,
   } = data;
-  console.log(data);
   return (
-    <Container>
+    <Container gap={gap} onClick={onClick}>
       <Img src={(attachments && attachments[0]?.imgPath) || noImg} />
       <Content>
         <div className="subTitle inline">

@@ -5,6 +5,7 @@ import { Container, Link, Logo, Section, Wrapper, Main } from "./style";
 import { navbar } from "../../utils/navbar";
 import Button from "../Generic/Button";
 import Filter from "../Filter";
+import Footer from "../Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const Home = () => {
       </Main>
       <Filter />
       <Outlet />
+      <Footer/>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Blur, Container, Content, Icons, Img } from "./style";
+import { Blur, Container, Content,  Img } from "./style";
 import noImg from "../../assets/imgs/noimg.jpg";
 import category from "../../assets/imgs/category.png";
 
