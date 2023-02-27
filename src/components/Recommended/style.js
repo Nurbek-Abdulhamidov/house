@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as arrow } from "../../assets/icons/arrowTop.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -9,6 +8,14 @@ export const Container = styled.div`
   padding: 96px 130px;
   max-width: 1440px;
   width: 100%;
+
+  @media (max-width: 920px) {
+    padding: 96px 60px;
+  }
+
+  @media (max-width: 570px) {
+    padding: 96px 30px;
+  }
 `;
 
 export const Content = styled.div`
@@ -27,7 +34,7 @@ Content.Title = styled.h1`
   text-align: center;
   letter-spacing: -0.02em;
   color: #0d263b;
-  `;
+`;
 
 Content.Desc = styled.h1`
   font-family: "Montserrat";

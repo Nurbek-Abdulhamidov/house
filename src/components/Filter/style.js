@@ -12,7 +12,17 @@ export const Container = styled.div`
   gap: 20px;
   width: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 10px auto;
+  @media (max-width: 920px) {
+    padding: var(--standardPadding);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+  }
+
+  @media (max-width: 570px) {
+    padding: var(--smallPadding);
+  }
 `;
 
 export const Icons = styled.div``;
@@ -30,13 +40,24 @@ Icons.Houses = styled(house)`
 export const MenuWrapper = styled.div`
   padding: 15px;
   background-color: white;
-  /* border: 1px solid #e6e9ec; */
+
+
 `;
 
 export const Section = styled.div`
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 1098px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 510px) {
+    display: grid;
+    grid-template-columns: auto;
+  }
 `;
 
 export const SelectAnt = styled(Select)`

@@ -53,6 +53,23 @@ export const Wrapper = styled.div`
   padding: 0px 130px;
   max-width: 1440px;
   width: 100%;
+  @media (max-width: 920px) {
+    padding: 96px 60px;
+  }
+
+  @media (max-width: 570px) {
+    padding: 96px 30px;
+  }
+
+  @media (max-width: 1120px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: auto;
+  }
 `;
 
 export const Icon = styled.div``;

@@ -9,6 +9,14 @@ export const Container = styled.div`
   padding: 96px 130px;
   max-width: 1440px;
   width: 100%;
+
+  @media (max-width: 920px) {
+    padding: 96px 60px;
+  }
+
+  @media (max-width: 570px) {
+    padding: 96px 30px;
+  }
 `;
 
 export const Arrow = styled(arrow)`

@@ -4,6 +4,7 @@ import { ReactComponent as bath } from "../../assets/icons/bath.svg";
 import { ReactComponent as garage } from "../../assets/icons/garage.svg";
 import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 import { ReactComponent as resize } from "../../assets/icons/resize.svg";
+import { ReactComponent as like } from "../../assets/icons/like.svg";
 
 export const Container = styled.div`
   width: 100%;
@@ -55,18 +56,22 @@ Icons.Bath = styled(bath)``;
 Icons.Garage = styled(garage)``;
 Icons.Ruler = styled(ruler)``;
 Icons.Resize = styled(resize)``;
-// Icons.Love = styled(love)`
-//   width: 27px;
-//   height: 27px;
-//   padding: 6px;
-//   background-color: #f6f8f9;
-//   border-radius: 50%;
-//   margin-left: 20px;
-// cursor: pointer;
-// :active {
-//   transform:scale(0.9) ;
-// }
-// `;
+Icons.Love = styled(like)`
+  width: 27px;
+  height: 27px;
+  padding: 6px;
+  background-color: ${({ favorite }) => (favorite ? "red" : "#f6f8f9")};
+  border-radius: 50%;
+  margin-left: 20px;
+  cursor: pointer;
+  & path {
+    fill: ${({ favorite }) => favorite && "white"};
+  }
+
+  :active {
+    transform: scale(0.9);
+  }
+`;
 
 export const Divider = styled.div`
   background: #e6e9ec;

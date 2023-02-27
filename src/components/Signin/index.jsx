@@ -5,7 +5,7 @@ import useRequest from "../../hooks/useRequest";
 import { Button, Input } from "../Generic";
 import { Container, Content } from "./style";
 
-const Recent = () => {
+const Signin = () => {
   const request = useRequest();
   const [body, setBody] = useState({});
   const navigate = useNavigate();
@@ -48,4 +48,4 @@ const Recent = () => {
   );
 };
 
-export default Recent;
+export default Signin;

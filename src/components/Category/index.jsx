@@ -20,6 +20,35 @@ const GenCarousel = () => {
     speed: 500,
     dots: true,
     appendDots: (dots) => <h1>{dots}</h1>,
+    responsive: [
+      {
+        breakpoint: 1270,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1080,
+        settings: {
+          centerPadding: "-10px",
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          centerPadding: "-10px",
+        },
+      },
+    ],
   };
 
   useEffect(() => {

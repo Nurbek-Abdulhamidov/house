@@ -14,10 +14,10 @@ const Footer = () => {
           <Content.Item>
             <Icon.Phone /> +998 33 576 2020
           </Content.Item>
-          <Content.Item>
+          {/* <Content.Item>
             <Icon.Email />
             webbrainacademy@gmail.com
-          </Content.Item>
+          </Content.Item> */}
         </Content>
         <Content>
           <Content.Title>Discover</Content.Title>

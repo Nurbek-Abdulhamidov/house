@@ -3,7 +3,16 @@ import { ReactComponent as arrow } from "../../assets/icons/arrowTop.svg";
 
 export const Container = styled.div`
   position: relative;
-  height:fit-content ;
+
+  @media (max-width: 480px) {
+    height: 400px;
+  }
+
+  .ant-carousel {
+    @media (max-width: 480px) {
+      height: 400px;
+    }
+  }
 `;
 
 export const Arrow = styled(arrow)`
@@ -25,6 +34,15 @@ export const Arrow = styled(arrow)`
 
 export const Img = styled.img`
   width: 100%;
+  @media (max-width: 480px) {
+    width: fit-content;
+    height: 400px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
 `;
 
 export const Blur = styled.div`
@@ -42,6 +60,8 @@ export const Content = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+  height: inherit;
 
   display: flex;
   flex-direction: column;
@@ -57,6 +77,16 @@ Content.Title = styled.h1`
   line-height: 48px;
   letter-spacing: -0.02em;
   color: #ffffff;
+
+  @media (max-width: 920px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 740px) {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 40px;
+  }
 `;
 
 Content.Desc = styled.h1`
@@ -66,6 +96,10 @@ Content.Desc = styled.h1`
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+
+  @media (max-width: 920px) {
+    font-size: 14px;
+  }
 `;
 Content.Price = styled.h1`
   font-family: "Montserrat";

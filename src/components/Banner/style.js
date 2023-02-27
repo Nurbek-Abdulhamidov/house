@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import { ReactComponent as arrow } from "../../assets/icons/arrowTop.svg";
 
 export const Container = styled.div`
   position: relative;
-  height: fit-content;
+
+  @media (max-width: 560px) {
+    height: 250px;
+    width:fit-content ;
+  }
 `;
 
 export const Img = styled.img`
   width: 100%;
+  @media (max-width: 560px) {
+    height: inherit;
+  }
 `;
 
 export const Blur = styled.div`
@@ -43,4 +49,17 @@ Content.Title = styled.h1`
   color: #ffffff;
   max-width: 566px;
   width: 100%;
+
+  @media (max-width: 820px) {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: 560px) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+  }
 `;

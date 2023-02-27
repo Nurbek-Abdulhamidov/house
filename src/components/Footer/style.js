@@ -23,7 +23,7 @@ Content.Title = styled.div`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: #ffffff;
   margin-bottom: 32px;
@@ -38,6 +38,20 @@ Content.Item = styled.div`
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
+
+  @media (max-width: 760px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 680px) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -48,6 +62,16 @@ export const Wrapper = styled.div`
   margin-top: 40px;
   padding: 0 130px;
   max-width: 1440px;
+
+  @media (max-width: 1260px) {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 680px) {
+    gap: 10px;
+    grid-template-columns: auto;
+  }
 `;
 
 export const Icon = styled.div``;

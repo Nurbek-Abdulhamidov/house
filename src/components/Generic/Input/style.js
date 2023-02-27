@@ -1,7 +1,7 @@
- import { forwardRef } from "react";
+import { forwardRef } from "react";
 import styled from "styled-components";
 
-export const getType = ({ type,ref }) => {
+export const getType = ({ type, ref }) => {
   switch (type) {
     case "dark":
       return {
@@ -46,6 +46,12 @@ export const Container = styled.input`
   /* ${getType}; */
   :focus {
     border: 1px solid #0061df;
+  }
+
+  @media (max-width: 920px) {
+    ::placeholder {
+      font-size: 12px;
+    }
   }
 `;
 

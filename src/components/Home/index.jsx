@@ -14,8 +14,8 @@ const Home = () => {
       <Recommended />
       <Why />
       <Category />
-      <Banner />
-      <Recent />
+     <Banner />
+       <Recent />
     </Container>
   );
 };

@@ -12,6 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex: ${({ flex }) => flex};
   gap: ${({ gap }) => `${gap}px `};
+  margin: 10px 0;
 
   gap: 24px;
   ~ .user {
@@ -20,6 +21,10 @@ export const Container = styled.div`
     border-radius: 3px;
     margin-left: 24px;
     padding: 24px;
+
+    @media (max-width: 920px) {
+      margin-left: 0;
+    }
   }
 `;
 export const Wrapper = styled.div`
@@ -29,6 +34,15 @@ export const Wrapper = styled.div`
   margin: auto;
   width: 100%;
   padding-bottom: 48px;
+
+  @media (max-width: 920px) {
+    padding: var(--standardPadding);
+    flex-direction: column;
+  }
+
+  @media (max-width: 570px) {
+    padding: var(--smallPadding);
+  }
 `;
 export const Content = styled.div`
   display: flex;
@@ -62,6 +76,7 @@ Content.Title = styled.div`
 export const Section = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const Icons = styled.div``;
@@ -106,6 +121,7 @@ export const Details = styled.div`
   display: flex;
   align-items: center;
   margin: 32px 0;
+  flex-wrap: wrap;
 `;
 
 Details.Item = styled.div`
@@ -142,4 +158,76 @@ User.Img = styled.img`
   height: 56px;
   border-radius: 50%;
   margin-right: 10px;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  padding: var(--padding);
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  @media (max-width: 920px) {
+    flex-direction: column;
+    padding: var(--standardPadding);
+  }
+  @media (max-width: 570px) {
+    padding: var(--smallPadding);
+  }
+`;
+
+ImageContainer.Main = styled.img`
+  width: 100%;
+  max-width: 580px;
+  max-height: 400px;
+`;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 20px;
+
+  @media (max-width: 920px) {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+`;
+
+ImageContainer.Subimg = styled.img`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
+
+  @media (max-width: 920px) {
+    width: 100%;
+    max-width: 100%;
+  }
+`;
+
+export const Blur = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  font-family: bold;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+
+Blur.Container = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
 `;

@@ -27,8 +27,6 @@ const Filter = () => {
   const zipRef = useRef();
 
   const roomsRef = useRef();
-  const sortRef = useRef();
-  // const sizeRef = useRef();
 
   const minPriceRef = useRef();
   const maxPriceRef = useRef();
@@ -145,16 +143,16 @@ const Filter = () => {
         icon={<Icons.Houses />}
         placeholder="Enter an address, neighborhood, city, or ZIP code"
       />
-
-      <Popover placement="bottomRight" trigger="click" content={content}>
-        <Button type={"light"}>
-          {" "}
-          <Icons.Setting /> Advanced
+      <div style={{ display: "flex", gap: "20px" }}>
+        <Popover placement="bottomRight" trigger="click" content={content}>
+          <Button res type={"light"}>
+            <Icons.Setting /> Advanced
+          </Button>
+        </Popover>
+        <Button res>
+          <Icons.Search /> Search
         </Button>
-      </Popover>
-      <Button>
-        <Icons.Search /> Search
-      </Button>
+      </div>
     </Container>
   );
 };

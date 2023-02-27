@@ -4,13 +4,17 @@ import Recent from "../Recent";
 import { useParams } from "react-router-dom";
 import { Button, Input } from "../Generic";
 import { Checkbox } from "antd";
+import noImg from "../../assets/imgs/noimg.jpg";
 import nouserImage from "../../assets/imgs/nouser.png";
 import {
+  Blur,
   Container,
   Content,
   Description,
   Details,
   Icons,
+  ImageContainer,
+  ImgContainer,
   Section,
   User,
   Wrapper,
@@ -28,11 +32,39 @@ const HouseItem = () => {
     window.scrollTo(0, 0);
   }, [params?.id]);
 
+  console.log(data?.attachments);
+
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
   return (
     <>
+      <ImageContainer>
+        <ImageContainer.Main
+          src={(data?.attachments && data?.attachments[0]?.imgPath) || noImg}
+          alt="test"
+        />
+        <ImgContainer>
+          {data?.attachments?.slice(1, 5).map((value, index) => {
+            return data?.attachments.length > 4 && index === 3 ? (
+              <Blur.Container key={index}>
+                <ImageContainer.Subimg src={value.imgPath} alt="test" />
+                {data?.attachments.length - 5 === 0 ? (
+                  ""
+                ) : (
+                  <Blur>+ {data?.attachments.length - 5}</Blur>
+                )}
+              </Blur.Container>
+            ) : (
+              <ImageContainer.Subimg
+                key={index}
+                src={value.imgPath}
+                alt="test"
+              />
+            );
+          })}
+        </ImgContainer>
+      </ImageContainer>
       <Wrapper>
         <Container flex={3}>
           <Section>
@@ -53,18 +85,28 @@ const HouseItem = () => {
           </Section>
           <Section>
             <Details>
-              <Icons.Bed />
-              <Details.Item>Bed {data?.houseDetails?.beds || 0}</Details.Item>
-              <Icons.Bath />
-              <Details.Item>Bath {data?.houseDetails?.bath || 0}</Details.Item>
-              <Icons.Garage />
-              <Details.Item>
-                Garage {data?.houseDetails?.garage || 0}
-              </Details.Item>
-              <Icons.Ruler />
-              <Details.Item>
-                Area {data?.houseDetails?.area || 0} kv
-              </Details.Item>
+              <div style={{ textAlign: "center" }}>
+                <Icons.Bed />
+                <Details.Item>Bed {data?.houseDetails?.beds || 0}</Details.Item>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <Icons.Bath />
+                <Details.Item>
+                  Bath {data?.houseDetails?.bath || 0}
+                </Details.Item>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <Icons.Garage />
+                <Details.Item>
+                  Garage {data?.houseDetails?.garage || 0}
+                </Details.Item>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <Icons.Ruler />
+                <Details.Item>
+                  Area {data?.houseDetails?.area || 0} kv
+                </Details.Item>
+              </div>
             </Details>
             <Content>
               <Content flex>

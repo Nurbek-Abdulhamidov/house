@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { ReactComponent as bed } from "../../assets/icons/bed.svg";
-import { ReactComponent as bath } from "../../assets/icons/bath.svg";
-import { ReactComponent as garage } from "../../assets/icons/garage.svg";
-import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
-import { ReactComponent as resize } from "../../assets/icons/resize.svg";
+// import { ReactComponent as bed } from "../../assets/icons/bed.svg";
+// import { ReactComponent as bath } from "../../assets/icons/bath.svg";
+// import { ReactComponent as garage } from "../../assets/icons/garage.svg";
+// import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
+// import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 export const Container = styled.div`
   position: relative;

@@ -20,6 +20,8 @@ body {
 
   /* padding */
   --padding: 0 130px;
+  --standardPadding: 0 60px;
+  --smallPadding: 0 20px;
 
   /* Width */
   --width: 1440px;
@@ -64,4 +66,41 @@ body {
 .slick-next:before {
   color: black !important;
   font-size: 25px !important;
+}
+
+@media (max-width: 570px) {
+  .ant-popover {
+    width: 90%;
+  }
+}
+
+@media (max-width: 780px) {
+  .ant-table-wrapper {
+    overflow: scroll;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(81, 78, 78, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0061df;
+  outline: 1px solid slategrey;
+}
+
+.ant-dropdown {
+  text-align: center;
+}
+
+.ant-dropdown-menu-item {
+  padding: 10px 80px;
+}
+
+.ant-space-item span {
+  display: none;
 }

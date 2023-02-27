@@ -46,7 +46,14 @@ export const Container = styled.button`
   width: ${getWidth};
   height: ${({ height }) => (height ? `${height}px` : "44px")};
   ${getType};
+
+  opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   :active {
     opacity: 0.7;
+  }
+
+  @media (max-width: 875px) {
+    width: ${({ res }) => (res ? "100%" : `${getWidth}`)};
   }
 `;

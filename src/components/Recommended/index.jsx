@@ -20,6 +20,26 @@ const Recommended = () => {
     speed: 500,
     dots: true,
     appendDots: (dots) => <h1>{dots}</h1>,
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          centerPadding: "-10px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -32,7 +52,9 @@ const Recommended = () => {
     <Container>
       <Content>
         <Content.Title>Recommended</Content.Title>
-        <Content.Desc>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</Content.Desc>
+        <Content.Desc>
+          Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+        </Content.Desc>
       </Content>
       <Slider {...settings}>
         {data.map((value, index) => {
