@@ -8,7 +8,7 @@ const Footer = () => {
           <Content.Title>Contact us</Content.Title>
           <Content.Item>
             <Icon.Email />
-            Bunyodkor ko'chasi, Chilonzor 64-dom, 2-etaj, 1-xona, Webbrain
+            Bunyodkor ko'chasi, Chilonzor 64-dom, 2---etaj, 1-xona, Webbrain
             Academy
           </Content.Item>
           <Content.Item>
